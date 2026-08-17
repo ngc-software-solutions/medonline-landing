@@ -9,7 +9,9 @@
       "Bash(curl -s http://localhost:3000/)",
       "Bash(pkill -f \"next dev\")",
       "Bash(jobs)",
-      "Bash(git status *)"
+      "Bash(git status *)",
+      "Bash(npx next *)",
+      "Bash(grep -n '^out$\\\\|/out')"
     ]
   }
 }
