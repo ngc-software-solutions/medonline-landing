@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git mv *)",
       "Bash(pnpm add *)",
-      "Bash(pnpm exec *)"
+      "Bash(pnpm exec *)",
+      "Bash(git rm *)",
+      "Bash(pnpm run *)"
     ]
   }
 }
