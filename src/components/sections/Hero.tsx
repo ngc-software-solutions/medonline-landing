@@ -113,19 +113,19 @@ export default function Hero() {
 
         {/* Carousel */}
         <div className="relative hidden h-full w-full lg:block animate-fade-in-left">
-          <div className="absolute h-126.5 w-225 top-1/2 -right-64 -translate-y-1/2">
+          <div className="absolute h-126.5 w-225 top-1/2 -right-72 -translate-y-1/2">
             <CardSwap
               cardDistance={60}
               verticalDistance={70}
-              height={506}
-              width={900}
+              height={510}
+              width={910}
               delay={3000}
             >
               <Card>
                 <div className="relative h-full w-full overflow-hidden rounded-lg">
                   <Image
-                    src="/images/uno.png"
-                    alt="Expediente Clínico Electrónico"
+                    src="/images/home.webp"
+                    alt="Panel de inicio de MedOnline mostrando la agenda de citas del día y acceso rápido a los módulos de Pacientes, Agenda y Servicios"
                     fill
                     priority
                     className="object-cover"
@@ -135,8 +135,8 @@ export default function Hero() {
               <Card>
                 <div className="relative h-full w-full overflow-hidden rounded-lg">
                   <Image
-                    src="/images/dos.png"
-                    alt="Firma Digital"
+                    src="/images/patients.webp"
+                    alt="Módulo de Pacientes de MedOnline con listado de expedientes, número de expediente, CURP y estado de cada paciente"
                     fill
                     priority
                     className="object-cover"
@@ -146,8 +146,19 @@ export default function Hero() {
               <Card>
                 <div className="relative h-full w-full overflow-hidden rounded-lg">
                   <Image
-                    src="/images/tres.png"
-                    alt="Interoperabilidad"
+                    src="/images/clinicRecord.webp"
+                    alt="Expediente clínico electrónico de un paciente en MedOnline, con acceso a Hoja Frontal, Historia Clínica y Notas de Evolución en un solo lugar"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                </div>
+              </Card>
+              <Card>
+                <div className="relative h-full w-full overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/schedule.webp"
+                    alt="Calendario semanal de citas médicas en el módulo de Agenda de MedOnline, con reprogramación y vista por día, semana o mes"
                     fill
                     priority
                     className="object-cover"
