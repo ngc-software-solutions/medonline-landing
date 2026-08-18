@@ -1,9 +1,27 @@
+import Hero from "@/components/sections/Hero";
+import Problem from "@/components/sections/Problem";
+import Comparison from "@/components/sections/Comparison";
+import Compliance from "@/components/sections/Compliance";
+import DigitalSignature from "@/components/sections/DigitalSignature";
+import WhyUs from "@/components/sections/WhyUs";
+import Modules from "@/components/sections/Modules";
+import CurrentScope from "@/components/sections/CurrentScope";
+import TargetAudience from "@/components/sections/TargetAudience";
+import FinalCta from "@/components/sections/FinalCta";
+
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center">
-      <h1 className="text-3xl font-semibold">
-        La ley ya cambió. Tu expediente clínico también debe hacerlo.
-      </h1>
-    </div>
+    <>
+      <Hero />
+      <Problem />
+      <Comparison />
+      <Compliance />
+      <DigitalSignature />
+      <WhyUs />
+      <Modules />
+      <CurrentScope />
+      <TargetAudience />
+      <FinalCta />
+    </>
   );
 }
