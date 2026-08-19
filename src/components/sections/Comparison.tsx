@@ -20,12 +20,12 @@ export default function Comparison() {
   return (
     <section
       id="sin-con-medonline"
-      className="bg-background pt-4 pb-20 md:pb-28 lg:flex lg:min-h-screen lg:items-center lg:py-0"
+      className="bg-background pt-4 pb-20 md:pb-28 lg:pb-32"
     >
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
         <div className="timeline-view animate-zoom-in animate-range-entry text-center">
           <h2 className="text-4xl lg:text-[3rem] leading-tight lg:leading-[1.08] font-semibold tracking-tight text-foreground sm:text-3xl">
-            ¿Te suena familiar?
+            Así se ve el cambio
           </h2>
           <p className="mt-3 text-foreground/70">
             Así es tu consulta general hoy, y así puede ser con MedOnline
