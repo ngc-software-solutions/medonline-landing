@@ -16,7 +16,7 @@ import NavLink from "@/components/layout/NavLink";
 const navItems = [
   { id: "hero", label: "Inicio", icon: HomeIcon },
   { id: "sin-con-medonline", label: "Beneficios", icon: GitCompare },
-  { id: "cliente-fundador", label: "Cliente fundador", icon: Stethoscope },
+  { id: "cliente-fundador", label: "Testimonio", icon: Stethoscope },
   { id: "nom-004", label: "Cumplimiento", icon: ShieldCheck },
   { id: "modulos", label: "Módulos", icon: LayoutGrid },
 ];
