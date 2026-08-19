@@ -10,6 +10,7 @@ import {
 import type { ReactNode } from "react";
 import CardSwap, { Card } from "@/components/CardSwap";
 import Button from "@/components/ui/Button";
+import HeroScrollButton from "@/components/sections/HeroScrollButton";
 
 const NOM_004_LINK = (
   <a
@@ -169,6 +170,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <HeroScrollButton />
     </section>
   );
 }

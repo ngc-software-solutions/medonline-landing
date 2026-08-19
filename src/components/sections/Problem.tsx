@@ -22,7 +22,7 @@ export default function Problem() {
   return (
     <section
       id="problema"
-      className="bg-background py-16 md:py-24 lg:flex lg:min-h-screen lg:items-center lg:py-0"
+      className="bg-background py-16 md:py-24 lg:py-28"
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:px-12">
         {/* Text */}
