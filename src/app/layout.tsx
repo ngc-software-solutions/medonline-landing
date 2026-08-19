@@ -25,17 +25,17 @@ const siteUrl = "https://medonline.com.mx";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title:
-    "MedOnline | Expediente Clínico Electrónico para Clínicas Privadas | Diseñado conforme a NOM-004",
+  title: "MedOnline | Expediente Clínico Electrónico NOM-004",
   description:
-    "Digitaliza el expediente clínico de tu consulta general conforme al decreto de enero 2026 y la NOM-004-SSA3-2012. Sistema hecho para clínicas privadas de 1 a 3 médicos. Solicita información.",
+    "Digitaliza el expediente clínico de tu consulta conforme a la NOM-004-SSA3-2012 y el decreto 2026. Ideal para clínicas de 1 a 3 médicos. Solicita información.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
+    siteName: "MedOnline",
     title: "MedOnline — Tu expediente clínico, listo para la ley de 2026",
     description:
-      "Sistema de expediente clínico electrónico diseñado conforme a NOM-004-SSA3-2012, hecho para clínicas privadas de consulta general en México.",
+      "Expediente clínico electrónico conforme a NOM-004-SSA3-2012, para clínicas privadas de consulta general en México.",
     url: siteUrl,
     type: "website",
     locale: "es_MX",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MedOnline — Expediente Clínico Electrónico para Clínicas Privadas",
+    title: "MedOnline — Expediente Clínico Electrónico",
     description:
       "Diseñado conforme a NOM-004-SSA3-2012. Para clínicas privadas de consulta general en México.",
     images: ["/logo/og-image.png"],
