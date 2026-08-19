@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import Comparison from "@/components/sections/Comparison";
@@ -21,6 +22,7 @@ export default function Home() {
       <DigitalSignature />
       <Modules />
       <FinalCta />
+      <Footer />
       <BackToTopButton />
     </>
   );
