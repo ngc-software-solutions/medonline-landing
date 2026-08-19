@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "MedOnline | Expediente Clínico Electrónico NOM-004",
   description:
-    "Digitaliza el expediente clínico de tu consulta conforme a la NOM-004-SSA3-2012 y el decreto 2026. Ideal para clínicas de 1 a 3 médicos. Solicita información.",
+    "Digitaliza el expediente clínico de tu consulta conforme a la NOM-004-SSA3-2012 y el decreto 2026. Ideal para clínicas privadas de consulta general. Solicita información.",
   alternates: {
     canonical: "/",
   },
