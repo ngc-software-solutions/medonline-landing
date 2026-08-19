@@ -165,3 +165,12 @@ body {
 .animate-chevron-pulse {
   animation: chevron-pulse 1.4s ease-in-out infinite;
 }
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
