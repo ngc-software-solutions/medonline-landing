@@ -1,3 +1,4 @@
+import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import Comparison from "@/components/sections/Comparison";
@@ -14,6 +15,7 @@ import BackToTopButton from "@/components/ui/BackToTopButton";
 export default function Home() {
   return (
     <>
+      <Navbar />
       <Hero />
       <Problem />
       <Comparison />

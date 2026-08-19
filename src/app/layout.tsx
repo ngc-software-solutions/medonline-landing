@@ -4,7 +4,7 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const plusJakartaSans = localFont({
   src: [
@@ -26,7 +26,7 @@ const siteUrl = "https://medonline.com.mx";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title:
-    "MedOnline — Expediente Clínico Electrónico para Clínicas Privadas | Diseñado conforme a NOM-004",
+    "MedOnline | Expediente Clínico Electrónico para Clínicas Privadas | Diseñado conforme a NOM-004",
   description:
     "Digitaliza el expediente clínico de tu consulta general conforme al decreto de enero 2026 y la NOM-004-SSA3-2012. Sistema hecho para clínicas privadas de 1 a 3 médicos. Solicita información.",
   alternates: {
@@ -81,7 +81,13 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={cn("h-full", "antialiased", plusJakartaSans.variable, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        plusJakartaSans.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <head>
         <script
