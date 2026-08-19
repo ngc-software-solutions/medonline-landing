@@ -7,7 +7,6 @@ import Compliance from "@/components/sections/Compliance";
 import DigitalSignature from "@/components/sections/DigitalSignature";
 import Modules from "@/components/sections/Modules";
 import CurrentScope from "@/components/sections/CurrentScope";
-import TargetAudience from "@/components/sections/TargetAudience";
 import FinalCta from "@/components/sections/FinalCta";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 
@@ -23,7 +22,6 @@ export default function Home() {
       <DigitalSignature />
       <Modules />
       <CurrentScope />
-      <TargetAudience />
       <FinalCta />
       <BackToTopButton />
     </>
