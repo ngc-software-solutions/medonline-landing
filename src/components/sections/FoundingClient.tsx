@@ -14,10 +14,10 @@ export default function FoundingClient() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2.3fr_1fr] lg:gap-16">
           <div className="timeline-view flex flex-col justify-center animate-zoom-in animate-range-entry">
             <span className="font-mono text-xs tracking-wide text-primary uppercase">
-              Cliente fundador
+              En producción desde el día uno
             </span>
             <h2 className="mt-3 text-4xl lg:text-[3rem] leading-tight lg:leading-[1.08] font-semibold tracking-tight text-foreground">
-              Construido junto con Clínica San Juan
+              El expediente de Clínica San Juan ya vive en MedOnline
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground/70 sm:text-lg">
               MedOnline nació resolviendo un problema real: el expediente
@@ -78,7 +78,7 @@ export default function FoundingClient() {
               strokeWidth={1.5}
               className="mb-3 h-8 w-8 text-primary/50 sm:h-9 sm:w-9"
             />
-            <p className="text-xl leading-relaxed font-medium tracking-tight text-foreground sm:text-2xl lg:text-[1.75rem] lg:leading-snug">
+            <p className="text-xl leading-relaxed italic font-medium tracking-tight text-foreground sm:text-2xl lg:text-[1.75rem] lg:leading-snug">
               {DOCTOR_QUOTE}
             </p>
             <p className="mt-6 text-sm text-foreground/70 sm:text-base">
