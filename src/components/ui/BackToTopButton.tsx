@@ -30,9 +30,9 @@ export default function BackToTopButton() {
           : "pointer-events-none translate-y-3 opacity-0"
       }`}
     >
-      <span className="flex h-11 w-11 items-center justify-center rounded-full border border-primary bg-primary shadow-sm shadow-primary/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-primary/90 group-hover:shadow-md">
+      <span className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-muted bg-primary-muted/50 shadow-sm shadow-primary/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-md">
         <ChevronUp
-          className=" h-6 w-6 text-white"
+          className=" h-6 w-6 text-primary"
           strokeWidth={2}
           aria-hidden
         />
