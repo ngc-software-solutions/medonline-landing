@@ -6,7 +6,6 @@ import FoundingClient from "@/components/sections/FoundingClient";
 import Compliance from "@/components/sections/Compliance";
 import DigitalSignature from "@/components/sections/DigitalSignature";
 import Modules from "@/components/sections/Modules";
-import CurrentScope from "@/components/sections/CurrentScope";
 import FinalCta from "@/components/sections/FinalCta";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <Compliance />
       <DigitalSignature />
       <Modules />
-      <CurrentScope />
       <FinalCta />
       <BackToTopButton />
     </>
