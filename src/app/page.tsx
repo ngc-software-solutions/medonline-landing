@@ -5,7 +5,6 @@ import Comparison from "@/components/sections/Comparison";
 import FoundingClient from "@/components/sections/FoundingClient";
 import Compliance from "@/components/sections/Compliance";
 import DigitalSignature from "@/components/sections/DigitalSignature";
-import WhyUs from "@/components/sections/WhyUs";
 import Modules from "@/components/sections/Modules";
 import CurrentScope from "@/components/sections/CurrentScope";
 import TargetAudience from "@/components/sections/TargetAudience";
@@ -22,7 +21,6 @@ export default function Home() {
       <FoundingClient />
       <Compliance />
       <DigitalSignature />
-      <WhyUs />
       <Modules />
       <CurrentScope />
       <TargetAudience />
