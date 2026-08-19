@@ -39,13 +39,21 @@ export const metadata: Metadata = {
     url: siteUrl,
     type: "website",
     locale: "es_MX",
-    // TODO: og:image pendiente — falta el asset 1200x630px (ver sección 7 de la estrategia SEO).
+    images: [
+      {
+        url: "/logo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "MedOnline",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "MedOnline — Expediente Clínico Electrónico para Clínicas Privadas",
     description:
       "Diseñado conforme a NOM-004-SSA3-2012. Para clínicas privadas de consulta general en México.",
+    images: ["/logo/og-image.png"],
   },
 };
 
