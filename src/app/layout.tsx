@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     siteName: "MedOnline",
-    title: "MedOnline — Tu expediente clínico, listo para la ley de 2026",
+    title: "MedOnline — Expediente clínico electrónico, conforme a NOM-004",
     description:
       "Expediente clínico electrónico conforme a NOM-004-SSA3-2012, para clínicas privadas de consulta general en México.",
     url: siteUrl,

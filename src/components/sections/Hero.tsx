@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-background lg:h-screen"
+      className="relative overflow-hidden bg-background lg:h-screen mt-18 lg:mt-0"
     >
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-16 sm:px-8 lg:h-full lg:grid-cols-2 lg:gap-12 lg:px-12 lg:py-0">
         {/* Content */}
@@ -76,10 +76,8 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-8 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:mt-6 lg:text-[3.25rem] lg:leading-[1.08] animate-fade-in-right animate-delay-150">
-            La ley ya cambió.
-            <br />
-            <span className="text-primary">Tu expediente clínico</span> también
-            debe hacerlo.
+            <span className="text-primary">Tu expediente clínico</span>,
+            completo y conforme a NOM-004
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/70 sm:text-lg animate-fade-in-right animate-delay-200">
