@@ -3,6 +3,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Headset,
+  Info,
   Lock,
   ShieldCheck,
   TriangleAlert,
@@ -168,6 +169,19 @@ export default function Hero() {
               </Card>
             </CardSwap>
           </div>
+
+          {/* Disclaimer: datos ilustrativos */}
+          <p className="absolute bottom-0 inset-x-0 flex items-start gap-1.5 text-start text-xs text-[#94a3b8]">
+            <Info
+              className="h-3.5 w-3.5 shrink-0 translate-y-0.5"
+              strokeWidth={2}
+              aria-hidden
+            />
+            <span>
+              Los datos mostrados en estas capturas son generados aleatoriamente
+              con fines ilustrativos. No corresponden a pacientes reales.
+            </span>
+          </p>
         </div>
       </div>
 
