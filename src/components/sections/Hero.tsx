@@ -58,6 +58,7 @@ export default function Hero() {
         {/* Content */}
         <div className="flex flex-col items-start lg:h-full lg:justify-center">
           <Image
+            id="hero-logo"
             src="/logo/logo_medonline.svg"
             alt="MedOnline"
             width={168}
