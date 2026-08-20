@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import {
   HomeIcon,
   GitCompare,
@@ -35,6 +36,37 @@ export default function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Align the pill's vertical position with the Hero logo on lg+ screens,
+  // where the header is anchored to the right instead of stacking under it.
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+
+    const alignToLogo = () => {
+      if (window.innerWidth < 1024) {
+        header.style.top = "";
+        return;
+      }
+      const logo = document.getElementById("hero-logo");
+      if (!logo) return;
+      const logoRect = logo.getBoundingClientRect();
+      const top = logoRect.top + logoRect.height / 2 - header.offsetHeight / 2;
+      header.style.top = `${Math.max(top, 0)}px`;
+    };
+
+    alignToLogo();
+    const raf = requestAnimationFrame(() => requestAnimationFrame(alignToLogo));
+    // Hero's entrance animation can shift layout briefly; re-align once it settles.
+    const settleTimeout = window.setTimeout(alignToLogo, 700);
+
+    window.addEventListener("resize", alignToLogo);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.clearTimeout(settleTimeout);
+      window.removeEventListener("resize", alignToLogo);
+    };
   }, []);
 
   useEffect(() => {
@@ -91,9 +123,13 @@ export default function Navbar() {
         </div>
 
         {/* Mobile: brand + toggle */}
-        <span className="text-sm font-semibold text-foreground sm:hidden">
-          MedOnline
-        </span>
+        <Image
+          src="/logo/logo_reducido.svg"
+          alt="MedOnline"
+          width={140}
+          height={31}
+          className="h-6 w-auto sm:hidden"
+        />
         <button
           className="flex items-center justify-center rounded-full border border-transparent p-1.5 text-foreground/70 transition-all duration-300 hover:border-primary/20 hover:bg-primary-muted/25 hover:text-primary sm:hidden"
           onClick={() => setMenuOpen((prev) => !prev)}
