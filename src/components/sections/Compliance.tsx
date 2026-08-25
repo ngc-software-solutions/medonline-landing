@@ -22,7 +22,7 @@ const EXPEDIENTE_DOCUMENTS = [
   {
     id: "hoja-frontal",
     icon: FileText,
-    title: "Hoja de Frente",
+    title: "Hoja Frontal",
     description:
       "Identificación del paciente y vista consolidada de todo su expediente, siempre actualizada. Incluye datos del establecimiento, del paciente y un índice de todos los documentos ya firmados.",
   },

@@ -209,7 +209,6 @@ export default function Footer() {
             © {new Date().getFullYear()} NGC Software Solutions. Todos los
             derechos reservados.
           </p>
-          <p className="text-sm text-white/50">Hecho en Cuernavaca, Morelos</p>
         </div>
       </div>
     </footer>
