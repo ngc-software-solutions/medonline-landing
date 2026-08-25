@@ -49,6 +49,11 @@ export default function Navbar() {
         header.style.top = "";
         return;
       }
+      // getBoundingClientRect() is viewport-relative: once the user scrolls
+      // past the Hero, the logo is off-screen and its top goes negative.
+      // Skip recalculating in that case so a resize event doesn't clamp the
+      // header to top:0 — it just stays anchored at its last good position.
+      if (window.scrollY > 100) return;
       const logo = document.getElementById("hero-logo");
       if (!logo) return;
       const logoRect = logo.getBoundingClientRect();
