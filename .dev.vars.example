@@ -1,0 +1,25 @@
+# Variables que necesita el WORKER en tiempo de ejecución (el backend).
+# Copia este archivo como `.dev.vars` para probar el endpoint en local con
+# `pnpm preview`. Wrangler lo lee automáticamente y NO se sube al repo.
+#
+# OJO: Next.js NO lee este archivo. Las variables NEXT_PUBLIC_* del frontend
+# van en `.env.local`. Ver `.env.example`.
+
+# Requerida. API key de Resend (https://resend.com/api-keys).
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+
+# Opcionales. Si se omiten se usan los valores por defecto del endpoint:
+#   MAIL_FROM      -> MedOnline <noreply@medonline.com.mx>
+#   LEAD_TO_EMAIL  -> ngcsoftwaresolutions@gmail.com
+# MAIL_FROM=MedOnline <noreply@medonline.com.mx>
+# LEAD_TO_EMAIL=ngcsoftwaresolutions@gmail.com
+
+# Opcional. Si se define, el endpoint EXIGE y valida el token de Turnstile.
+# Déjala comentada para probar el formulario sin el widget anti-spam.
+#
+# Si la defines, tienes que definir también NEXT_PUBLIC_TURNSTILE_SITE_KEY en
+# `.env.local`, o el widget no se muestra y todos los envíos fallarán con
+# "Completa la verificación anti-spam e intenta de nuevo."
+# Para localhost, la llave de prueba que siempre pasa es:
+#   TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+# TURNSTILE_SECRET_KEY=0x4xxxxxxxxxxxxxxxxxxxx
