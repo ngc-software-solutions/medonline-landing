@@ -1,9 +1,22 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowRight, ChevronDown, ShieldCheck } from "lucide-react";
+import {
+  AlertCircle,
+  ArrowRight,
+  ChevronDown,
+  ShieldCheck,
+} from "lucide-react";
 import Button from "@/components/ui/Button";
+import Turnstile from "@/components/ui/Turnstile";
 import { cn } from "@/lib/utils";
+
+const CONTACT_ENDPOINT = "/api/contacto";
+
+const GENERIC_ERROR =
+  "No pudimos enviar tus datos. Revisa tu conexión e intenta de nuevo.";
+
+type Status = "idle" | "submitting" | "success" | "error";
 
 const DOCTORS_RANGE_OPTIONS = [
   "1 médico",
@@ -69,13 +82,7 @@ function SelectField({
   return (
     <Field label={label} htmlFor={id} className={className}>
       <div className="relative">
-        <select
-          id={id}
-          name={name}
-          required
-          defaultValue=""
-          className={selectClasses}
-        >
+        <select id={id} name={name} defaultValue="" className={selectClasses}>
           <option value="" disabled>
             {placeholder}
           </option>
@@ -96,11 +103,44 @@ function SelectField({
 }
 
 export default function FinalCta() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+
+    const formData = new FormData(event.currentTarget);
+    const payload = {
+      nombre_clinica: formData.get("clinicName"),
+      nombre_contacto: formData.get("contactName"),
+      contacto: formData.get("contactMethod"),
+      num_medicos: formData.get("doctorsRange"),
+      expediente_actual: formData.get("recordKeeping"),
+      "cf-turnstile-response": formData.get("cf-turnstile-response"),
+    };
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        setErrorMessage(body?.error || GENERIC_ERROR);
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+    } catch {
+      setErrorMessage(GENERIC_ERROR);
+      setStatus("error");
+    }
   }
 
   return (
@@ -125,7 +165,7 @@ export default function FinalCta() {
 
         {/* Form */}
         <div className="timeline-view mt-12 animate-zoom-in animate-range-entry animate-delay-150">
-          {submitted ? (
+          {status === "success" ? (
             <div className="flex flex-col items-center gap-3 rounded-2xl border border-primary/20 bg-primary-muted/20 px-8 py-14 text-center">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-muted/60 text-primary">
                 <ShieldCheck className="h-5 w-5" strokeWidth={2} aria-hidden />
@@ -202,12 +242,31 @@ export default function FinalCta() {
                 />
               </div>
 
+              <Turnstile className="mt-6" />
+
+              {status === "error" && (
+                <div
+                  role="alert"
+                  className="mt-6 flex items-start gap-2.5 rounded-lg border border-danger/25 bg-danger/5 px-4 py-3"
+                >
+                  <AlertCircle
+                    className="mt-0.5 h-4 w-4 shrink-0 text-danger"
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <p className="text-sm leading-relaxed text-foreground/80">
+                    {errorMessage}
+                  </p>
+                </div>
+              )}
+
               <div className="mt-8 flex flex-col items-center gap-3">
                 <Button
                   type="submit"
                   variant="primary"
                   size="lg"
                   fullWidth
+                  loading={status === "submitting"}
                   rightIcon={<ArrowRight />}
                 >
                   Dejar mis datos de contacto
